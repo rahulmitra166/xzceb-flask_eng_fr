@@ -11,7 +11,6 @@ language_translator = LanguageTranslatorV3(
                     version = "2018-06-12",
                     authenticator = authenticator_key)
 language_translator.set_service_url(url)
-language_translator.set_disable_ssl_verification(True)
 
 def english_to_french(english_text):
     """

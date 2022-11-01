@@ -3,34 +3,34 @@ from translator import english_to_french, french_to_english
 
 class TestEnglishToFrench(unittest.TestCase):
     """
-    Unit test class to check assertEqual for method english_to_french
+    Unit test class for method english_to_french
     """
-    def test_assert_equal(self):
+    def test_assert_equal_1(self):
         """
-        Method checks for equality for null input and an english word
+        Testing for equality
         """
-        self.assertEqual(english_to_french(""), "Bonjour")
-        self.assertEqual(english_to_french("Hello"), "Bonjour")
-    def test_assert_not_equal(self):
+        with self.subTest(msg='Check for en-fr assertEqual'):
+            self.assertEqual(english_to_french("Hello"), "Bonjour")
+    def test_assert_not_equal_1(self):
         """
-        Method checks for inequality for null input and an english word
+        Testing for inequality
         """
-        self.assertNotEqual(english_to_french(""), "Bonjour")
-        self.assertNotEqual(english_to_french("Hello"), "Bonjour")
+        with self.subTest(msg='Check for en-fr assertNotEqual'):
+            self.assertNotEqual(english_to_french("Hello"), "Bonjour")
 class TestFrenchToEnglish(unittest.TestCase):
     """
-    Unit test class to check assertEqual for method english_to_french
+    Unit test class for method english_to_french
     """
-    def test_assert_equal(self):
+    def test_assert_equal_2(self):
         """
-        Method checks for equality for null input and a french word
+        Testing for equality
         """
-        self.assertEqual(french_to_english(""), "Hello")
-        self.assertEqual(french_to_english("Bonjour"), "Hello")
-    def test_assert_not_equal(self):
+        with self.subTest(msg='Check for fr-en assertEqual'):
+            self.assertEqual(french_to_english("Bonjour"), "Hello")
+    def test_assert_not_equal_2(self):
         """
-        Method checks for inequality for null input and a french word
+        Testing for inequality
         """
-        self.assertNotEqual(french_to_english(""), "Hello")
-        self.assertNotEqual(french_to_english("Bonjour"), "Hello")
+        with self.subTest(msg='Check for fr-en assertNotEqual'):
+            self.assertNotEqual(french_to_english("Bonjour"), "Hello")
 unittest.main()
